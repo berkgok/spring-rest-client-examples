@@ -8,4 +8,6 @@ public interface ApiService {
 
     List<Pokemon> getPokemonList(Integer limit);
 
+    Pokemon getPokemonByName(String name);
+
 }

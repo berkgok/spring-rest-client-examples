@@ -21,6 +21,16 @@ public class ApiServiceImpl implements ApiService {
 
         PokemonData pokemonData = restTemplate.getForObject("https://pokeapi.co/api/v2/pokemon?limit=" + limit, PokemonData.class);
 
+        //todo: Add Custom Exception for NPE
         return pokemonData.getPokemonList();
+    }
+
+    @Override
+    public Pokemon getPokemonByName(String name) {
+
+        Pokemon pokemon = restTemplate.getForObject("https://pokeapi.co/api/v2/pokemon/" + name, Pokemon.class);
+
+        //todo: Add Custom Exception for NPE
+        return pokemon;
     }
 }

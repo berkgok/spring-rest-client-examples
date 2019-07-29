@@ -31,4 +31,13 @@ public class ApiServiceImplTest {
         assertEquals(3, pokemonList.size());
 
     }
+
+    @Test
+    public void testGetPokemonByName() throws Exception{
+
+        Pokemon pokemon = apiService.getPokemonByName("ditto");
+
+        assertEquals("ditto", pokemon.getName());
+
+    }
 }
